@@ -1,0 +1,47 @@
+h1 {
+  text-align: center;
+  color: darkgreen;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  background-color: #dff0d8;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #b2e2b2;
+}
+
+p {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-top: 15px;
+}
+
+/* Aplica si el ngClass agrega 'resaltar' */
+.resaltar {
+  background-color: #ffe0e0;
+  border: 2px solid red;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+/* Suaviza cambios de color del ngStyle */
+div {
+  transition: color 0.5s ease, background-color 0.5s ease;
+}

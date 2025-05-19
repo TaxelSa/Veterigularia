@@ -1,1 +1,38 @@
-<p>expedientes works!</p>
+<h1>Selecciona un animal para dar servicio</h1>
+
+<!-- Input para agregar nueva mascota -->
+<input type="text" [(ngModel)]="nuevaMascota" placeholder="Escribe un animal" />
+<button (click)="agregarMascota()">Agregar</button>
+
+<!-- ngFor -->
+<ul>
+  <li *ngFor="let animal of animales">
+    <button (click)="seleccionar(animal)">
+      {{ animal }}
+    </button>
+  </li>
+</ul>
+
+<!-- ngIf -->
+<p *ngIf="mostrarMensaje">
+  ¡Has seleccionado: <strong>{{ tipoSeleccionado }}</strong>!
+</p>
+
+<!-- ngSwitch -->
+<div *ngSwitch="tipoSeleccionado">
+  <p *ngSwitchCase="'Perro'">perros</p>
+  <p *ngSwitchCase="'Gato'">gatos</p>
+  <p *ngSwitchCase="'Pájaro'">pájaros</p>
+  <p *ngSwitchDefault>Selecciona un animal para saber más.</p>
+</div>
+
+<!-- ngClass y ngStyle -->
+<div
+  [ngClass]="{ resaltar: tipoSeleccionado === 'Gato' }"
+  [ngStyle]="{
+    color: tipoSeleccionado === 'Perro' ? 'blue' : 'black',
+    fontSize: '18px'
+  }"
+>
+  Esta sección cambia con estilo según tu selección.
+</div>

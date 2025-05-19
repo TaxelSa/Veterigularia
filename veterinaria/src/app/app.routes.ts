@@ -5,6 +5,6 @@ import { ExpedientesComponent } from './expedientes/expedientes.component';
 
 export const routes: Routes = [
   { path: 'inicio', component: InicioComponent },
-  { path: 'expendientes', component: ExpedientesComponent },
+  { path: 'expedientes', component: ExpedientesComponent },
   { path: '', redirectTo: 'inicio', pathMatch: 'full' }
 ];
