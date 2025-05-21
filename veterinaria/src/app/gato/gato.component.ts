@@ -22,12 +22,12 @@ export class GatoComponent implements OnInit {
   constructor(private http: HttpClient) {}
 
   ngOnInit() {
-    this.http.get<Gato[]>('http://localhost/php/obtener_gatos.php')
+    this.http.get<Gato[]>('http://localhost/Veterigularia/veterinaria/php/obtener_gatos.php')
       .subscribe(data => this.gatos = data);
   }
 
   verDetalles(num: number) {
-    this.http.get(`http://localhost/php/obtener_detalles_gato.php?num=${num}`)
+    this.http.get(`http://localhost/Veterigularia/veterinaria/php/obtener_detalles_gato.php?num=${num}`)
       .subscribe(data => this.detalles = data);
   }
 }
