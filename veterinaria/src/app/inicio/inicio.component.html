@@ -1,1 +1,8 @@
-<p>inicio works!</p>
+<h2>¡Hola! </h2>
+<input [(ngModel)]="nombre" placeholder="Escribe tu nombre" />
+
+<button (click)="Saludar()">Saludar</button>
+
+<div *ngIf="mostrarMensaje" class="mensaje">
+  {{ mensaje }}
+</div>

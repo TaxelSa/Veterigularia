@@ -1,0 +1,23 @@
+<h2>Lista de Gatos</h2>
+<table border="1">
+  <tr>
+    <th>Nombre</th>
+    <th>Raza</th>
+    <th>Acciones</th>
+  </tr>
+  <tr *ngFor="let gato of gatos">
+    <td>{{ gato.nombre }}</td>
+    <td>{{ gato.raza }}</td>
+    <td>
+      <button (click)="verDetalles(gato.num)">Ver Detalles</button>
+    </td>
+  </tr>
+</table>
+
+<div *ngIf="detalles">
+  <h3>Detalles del Gato</h3>
+<p><strong>Dueño:</strong> {{ detalles['dueño'] }}</p>
+  <p><strong>Síntomas:</strong> {{ detalles['sintomas'] }}</p>
+  <p><strong>Padecimiento:</strong> {{ detalles['padecimiento'] }}</p>
+</div>
+
